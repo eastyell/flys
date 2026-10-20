@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞打机游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="score-board">
+            <span>分数: <span id="score">0</span></span>
+            <span>生命: <span id="lives">3</span></span>
+            <button id="musicToggle" class="music-btn" title="背景音乐开关">♪ 开</button>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        <div class="tips">
+            <span>WASD/方向键移动 · 空格射击</span>
+            <span>拾取医疗包+1生命 · 盾牌短暂无敌</span>
+        </div>
+        <div id="gameOver" class="game-over hidden">
+            <h2>游戏结束</h2>
+            <p>最终分数: <span id="finalScore">0</span></p>
+            <div id="saveScoreSection" class="save-section">
+                <input type="text" id="playerName" placeholder="输入名字(最多8字)" maxlength="8">
+                <button id="saveScoreBtn">保存分数</button>
+            </div>
+            <div class="leaderboard">
+                <h3>排行榜 TOP 10</h3>
+                <ol id="leaderboardList"></ol>
+            </div>
+            <button id="restartBtn">重新开始</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
